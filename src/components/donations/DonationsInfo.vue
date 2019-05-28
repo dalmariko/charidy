@@ -1,5 +1,5 @@
 <template>
-<div class="donationsInfo m-2"></div>
+<div class="donationsInfo"></div>
 </template>
 
 <script>

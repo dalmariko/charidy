@@ -1,5 +1,5 @@
 <template>
-<div class="ownermoreinfo m-2"></div>
+<div class="ownermoreinfo"></div>
 </template>
 
 <script>

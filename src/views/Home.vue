@@ -1,25 +1,20 @@
 <template>
-  <b-container>
-    <b-row>
-      <b-col sm="8">
-        <OwnerMoreInfo/>
 
-        <div class="d-flex justify-content-end m-3">
-          <VideoPreview/>
-        </div>
+  <div class="container">
+    <OwnerMoreInfo/>
+    <div class="">
+      <VideoPreview/>
+    </div>
 
-        <div class="d-flex justify-content-start" v-for="donate in donations">
-          <DonationsInfo/>
-        </div>
-      </b-col>
+    <div class="" v-for="donate in donations">
+      <DonationsInfo/>
+    </div>
 
-      <b-col sm="4">
-        <div class="d-flex justify-content-center" v-for="ovner in ovners">
-          <OwnersShortInfo/>
-        </div>
-      </b-col>
-    </b-row>
-  </b-container>
+    <div class="" v-for="ovner in ovners">
+      <OwnersShortInfo/>
+    </div>
+  </div>
+
 </template>
 
 <script>
@@ -98,5 +93,10 @@
 </script>
 
 <style scoped lang="scss">
-
+  .container {
+    min-width: 300px;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
