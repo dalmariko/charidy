@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'VideoPreview'
-  }
+export default {
+  name: 'VideoPreview'
+}
 </script>
 
 <style scoped lang="scss">

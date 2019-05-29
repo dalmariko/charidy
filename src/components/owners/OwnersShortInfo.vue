@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'OwnersShortInfo'
-  }
+export default {
+  name: 'OwnersShortInfo'
+}
 </script>
 
 <style scoped lang="scss">

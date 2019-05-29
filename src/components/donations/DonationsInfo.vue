@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'DonationsInfo'
-  }
+export default {
+  name: 'DonationsInfo'
+}
 </script>
 
 <style scoped lang="scss">
