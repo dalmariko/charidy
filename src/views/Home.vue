@@ -1,5 +1,5 @@
 <template>
-
+<div>
   <div class="container">
     <OwnerMoreInfo/>
     <div class="">
@@ -14,6 +14,8 @@
       <OwnersShortInfo/>
     </div>
   </div>
+
+</div>
 
 </template>
 
@@ -95,7 +97,7 @@ export default {
 <style scoped lang="scss">
   .container {
     min-width: 300px;
-    max-width: 1360px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }

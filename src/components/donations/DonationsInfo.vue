@@ -1,5 +1,7 @@
 <template>
-<div class="donationsInfo"></div>
+<div class="donationsInfo">
+  <h4>please donate</h4>
+</div>
 </template>
 
 <script>
@@ -14,4 +16,6 @@ export default {
   height: 70px;
   background-color: aqua;
 }
+  h4{font-family: 'Open Sans', sans-serif}
+
 </style>
