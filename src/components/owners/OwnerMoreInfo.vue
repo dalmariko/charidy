@@ -1,9 +1,5 @@
 <template>
-<div class="ownermoreinfo">
-
-  <h2 class="v">Hello my name is Sandra</h2>
-  <h2 class="o">Hello my name is Sandra</h2>
-</div>
+<div class="ownermoreinfo"></div>
 </template>
 
 <script>
@@ -15,13 +11,17 @@ export default {
 <style scoped lang="scss">
 .ownermoreinfo{
   width: 300px;
-  height: 200px;
+  height: 250px;
   background-color: #7f7e7e;
 }
-  h2.v{
-    font-family: 'Vito', sans-serif;
-  }
-h2.o{
-    font-family: 'Open Sans', sans-serif;
-  }
+  h2.o1{font-family: 'OpenSansBold'}
+  h2.o2{font-family: 'OpenSansExtraBold'}
+  h2.o3{font-family: 'OpenSansLight';}
+  h2.o4{font-family: 'OpenSansRegular';}
+  h2.o5{font-family: 'OpenSansSemiBold';}
+
+  h2.v1{font-family: 'VitoCompresset';}
+  h2.v2{font-family: 'VitoBold';}
+  h2.v3{font-family: 'VitoLight';}
+
 </style>

@@ -1,22 +1,20 @@
 <template>
-<div>
   <div class="container">
     <OwnerMoreInfo/>
+
     <div class="">
       <VideoPreview/>
     </div>
 
-    <div class="" v-for="donate in donations">
-      <DonationsInfo/>
+    <div class="" v-for="(donate,name,index) in list(donations)" :key="index">
+      <DonationsInfo :donations="donate" />
     </div>
 
-    <div class="" v-for="ovner in ovners">
-      <OwnersShortInfo/>
+    <div class="" v-for="(ovner,name,index) in fiveOwners" :key="index">
+      <OwnersShortInfo :info="ovner"/>
     </div>
+
   </div>
-
-</div>
-
 </template>
 
 <script>
@@ -27,9 +25,29 @@ import DonationsInfo from '@/components/donations/DonationsInfo.vue'
 
 export default {
   name: 'Home',
-  data () {
+  data: function () {
     return {
       donations: [
+        {
+          rased: 122.457,
+          donors: 200,
+          date: '2 June 2016'
+        },
+        {
+          rased: 122.457,
+          donors: 200,
+          date: '2 June 2016'
+        },
+        {
+          rased: 122.457,
+          donors: 200,
+          date: '2 June 2016'
+        },
+        {
+          rased: 122.457,
+          donors: 200,
+          date: '2 June 2016'
+        },
         {
           rased: 122.457,
           donors: 200,
@@ -52,6 +70,36 @@ export default {
         }
       ],
       ovners: [
+        {
+          name: 'Sandra',
+          foto: '',
+          title: 'asdasdasdasdasdas',
+          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+        },
+        {
+          name: 'Kasandra',
+          foto: '',
+          title: 'asdasdasdasdasdas',
+          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+        },
+        {
+          name: 'Wganda',
+          foto: '',
+          title: 'asdasdasdasdasdas',
+          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+        },
+        {
+          name: 'Uganda',
+          foto: '',
+          title: 'asdasdasdasdasdas',
+          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+        },
+        {
+          name: 'Ananda',
+          foto: '',
+          title: 'asdasdasdasdasdas',
+          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+        },
         {
           name: 'Sandra',
           foto: '',
@@ -85,11 +133,24 @@ export default {
       ]
     }
   },
+  methods: {
+    list: function (items) {
+      return items.filter(function (item, index) {
+        return item ? index < 5 : ''
+      })
+    }
+  },
   components: {
     OwnerMoreInfo,
     OwnersShortInfo,
     VideoPreview,
     DonationsInfo
+  },
+  computed: {
+    fiveOwners: function () {
+      return this.ovners.filter(function (item, index) { return item ? index < 5 : '' })
+    }
+
   }
 }
 </script>
