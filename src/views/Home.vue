@@ -1,19 +1,28 @@
 <template>
   <div class="container">
-    <OwnerMoreInfo/>
+    <div class="infoBox">
 
-    <div class="">
-      <VideoPreview/>
+      <div class="mainInfo">
+
+        <div class="owner">
+          <OwnerMoreInfo/>
+        </div>
+
+        <div class="video">
+          <VideoPreview/>
+        </div>
+
+        <div class="donations">
+          <DonationsInfo v-for="(donate,name,index) in list(donations)" :key="index" :donations="donate"/>
+        </div>
+
+      </div>
+
+      <div class="ownersInfo">
+        <OwnersShortInfo v-for="(ovner,name,index) in fiveOwners" :key="index" :info="ovner"/>
+      </div>
+
     </div>
-
-    <div class="" v-for="(donate,name,index) in list(donations)" :key="index">
-      <DonationsInfo :donations="donate" />
-    </div>
-
-    <div class="" v-for="(ovner,name,index) in fiveOwners" :key="index">
-      <OwnersShortInfo :info="ovner"/>
-    </div>
-
   </div>
 </template>
 
@@ -148,7 +157,9 @@ export default {
   },
   computed: {
     fiveOwners: function () {
-      return this.ovners.filter(function (item, index) { return item ? index < 5 : '' })
+      return this.ovners.filter(function (item, index) {
+        return item ? index < 5 : ''
+      })
     }
 
   }
@@ -162,4 +173,45 @@ export default {
     margin-left: auto;
     margin-right: auto;
   }
+
+  %flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mainInfo {
+    width: 75%;
+    @extend %flex;
+
+    .owner {
+      width: 70%;
+      align-self: flex-start;
+    }
+
+    .video {
+      width: 75%;
+      align-self: flex-end;
+      margin-bottom: 75px;
+      margin-right: 70px;
+    }
+
+    .donations {
+      width: 85%;
+      align-self: flex-start;
+    }
+  }
+
+  .ownersInfo {
+    width: 20%;
+    @extend %flex;
+    align-self: center;
+  }
+
 </style>

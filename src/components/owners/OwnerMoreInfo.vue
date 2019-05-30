@@ -10,7 +10,7 @@ export default {
 
 <style scoped lang="scss">
 .ownermoreinfo{
-  width: 300px;
+  width: 100%;
   height: 250px;
   background-color: #7f7e7e;
 }

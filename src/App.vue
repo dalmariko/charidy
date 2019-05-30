@@ -93,6 +93,7 @@
   }
 
   #app {
+    font-size: 14px;
     font-family: 'VitoCompresset';
     font-family: 'VitoBold';
     font-family: 'VitoLight';
@@ -103,6 +104,6 @@
     font-family: 'OpenSansRegular';
     font-family: 'OpenSansSemiBold';
 
-    background-color: #f5f5f5;
+    background-color: #000000;
   }
 </style>

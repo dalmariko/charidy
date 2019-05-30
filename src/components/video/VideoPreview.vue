@@ -10,7 +10,7 @@ export default {
 
 <style scoped lang="scss">
 .videopreview{
-  width: 500px;
+  width: 100%;
   height: 350px;
   background-color: blueviolet;
 }

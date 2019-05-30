@@ -14,7 +14,7 @@ export default {
 
 <style scoped lang="scss">
 .ownershortinfo{
-  width: 180px;
+  width: 100%;
   height: 180px;
   background-color: brown;
   margin: 10px 0;

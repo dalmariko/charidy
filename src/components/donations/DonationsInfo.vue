@@ -1,18 +1,18 @@
 <template>
   <div class="donationsInfo">
 
-    <div class="fild">
-      <p class="head">rased</p>
+    <div class="filds">
+      <p class="fild">rased</p>
       <p class="rased">{{donations.rased}}</p>
     </div>
 
-    <div class="fild">
-      <p class="head">donors</p>
+    <div class="filds">
+      <p class="fild">donors</p>
       <p class="donors">{{donations.donors}}</p>
     </div>
 
-    <div class="fild">
-      <p class="head">date</p>
+    <div class="filds">
+      <p class="fild">date</p>
       <p class="date">{{donations.date}}</p>
     </div>
 
@@ -32,7 +32,7 @@ export default {
 <style scoped lang="scss">
 
   .donationsInfo {
-    width: 650px;
+    width: 100%;
     height: 70px;
     background-color: #ffffff;
     display: flex;
@@ -42,14 +42,14 @@ export default {
     margin: 1.7rem 0;
   }
 
-  .fild {
+  .filds {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
 
-  .head {
+  .fild {
     font-family: 'VitoLight', serif;
     font-size: 1rem;
     text-transform: uppercase;
