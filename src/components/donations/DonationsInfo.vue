@@ -1,24 +1,27 @@
 <template>
   <div class="donationsInfo">
+    <div class="donate">
+      <div class="filds">
+        <p class="fild">rased</p>
+        <p class="rased">{{donations.rased}}</p>
+      </div>
 
-    <div class="filds">
-      <p class="fild">rased</p>
-      <p class="rased">{{donations.rased}}</p>
-    </div>
+      <div class="filds">
+        <p class="fild">donors</p>
+        <p class="donors">{{donations.donors}}</p>
+      </div>
 
-    <div class="filds">
-      <p class="fild">donors</p>
-      <p class="donors">{{donations.donors}}</p>
-    </div>
+      <div class="filds">
+        <p class="fild">date</p>
+        <p class="date">{{donations.date}}</p>
+      </div>
 
-    <div class="filds">
-      <p class="fild">date</p>
-      <p class="date">{{donations.date}}</p>
     </div>
 
     <a href="#" class="donateButton">
       See the campaign
     </a>
+
   </div>
 </template>
 
@@ -32,21 +35,21 @@ export default {
 <style scoped lang="scss">
 
   .donationsInfo {
-    width: 100%;
-    height: 70px;
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+
     align-items: center;
     margin: 1.7rem 0;
   }
 
   .filds {
+    margin: 1.1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+
   }
 
   .fild {
@@ -77,15 +80,21 @@ export default {
     color: #ffb968;
   }
 
+  .donate{
+    display: flex;
+    justify-content: space-around;
+    flex:2 1 160px;
+  }
+
   .donateButton {
+    flex: .5 1 160px;
+    margin: 1.1rem;
     display: flex;
     height: 3.6rem;
-    min-width: 16rem;
     align-items: center;
     justify-content: center;
     border-radius: 1.8rem;
     background-color: #ff5555;
-    flex-shrink: 0;
     font-family: 'OpenSansBold', serif;
     font-size: 1.4rem;
     color: #fff;

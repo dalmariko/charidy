@@ -189,19 +189,16 @@ export default {
   .mainInfo {
     width: 75%;
     @extend %flex;
-
     .owner {
       width: 70%;
       align-self: flex-start;
     }
-
     .video {
       width: 75%;
       align-self: flex-end;
       margin-bottom: 75px;
       margin-right: 70px;
     }
-
     .donations {
       width: 85%;
       align-self: flex-start;
