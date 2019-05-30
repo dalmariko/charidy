@@ -19,7 +19,7 @@
       </div>
 
       <div class="ownersInfo">
-        <OwnersShortInfo v-for="(ovner,name,index) in fiveOwners" :key="index" :info="ovner"/>
+        <OwnersShortInfo v-for="(ovner,name,index) in fiveOwners" :key="index" :info="ovner" />
       </div>
 
     </div>
@@ -81,32 +81,32 @@ export default {
       ovners: [
         {
           name: 'Sandra',
-          foto: '',
+          foto: 'c320ae6bd4bbb7549f6be5803a57180aaa3aa1e6.png',
           title: 'asdasdasdasdasdas',
           descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
         },
         {
           name: 'Kasandra',
-          foto: '',
+          foto: 'ccff91a9d9d1ae6ddf1c2041aa216e8b964ecc52.png',
           title: 'asdasdasdasdasdas',
           descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
         },
         {
           name: 'Wganda',
-          foto: '',
-          title: 'asdasdasdasdasdas',
+          foto: 'cfe7fa00eecdbb790019ef45c5c2d7bc50125ead.png',
+          title: 'Trusty, Victor Smorgon Chiritable Trust',
           descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
         },
         {
-          name: 'Uganda',
-          foto: '',
-          title: 'asdasdasdasdasdas',
+          name: 'Belinda Bardas',
+          foto: 'f757be725a7f67f13520660a248789ac5485b292.png',
+          title: 'Trusty, Victor Smorgon Chiritable Trust',
           descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
         },
         {
           name: 'Ananda',
           foto: '',
-          title: 'asdasdasdasdasdas',
+          title: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda',
           descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
         },
         {
