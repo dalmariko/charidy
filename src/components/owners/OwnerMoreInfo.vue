@@ -34,6 +34,9 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.06);
     border-radius: 6px;
+    font-size: 14px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
   }
 
   %container{
@@ -43,7 +46,7 @@ export default {
   %flexrow{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -51,16 +54,17 @@ export default {
 
   img {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
   }
 
   .head {
+
     @extend %flexrow;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   .ownerdata {
@@ -69,27 +73,30 @@ export default {
   }
 
   .foto {
+    width: 80px;
+    height: 80px;
   }
 
   .title {
     h3 {
       font-family: 'VitoBold', sans-serif;
-      font-size: 16px;
+      font-size: 1.6rem;
       color: $color;
     }
     h4 {
       font-family: 'VitoLight', sans-serif;
-      font-size: 14px;
+      font-size: 1.4rem;
       color: $color;
     }
   }
 
   .quotes {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     background-image: url("~/assets/images/quotes.svg");
     background-position: center;
     background-size: cover;
+    background-color: #ff5555;
   }
 
   .descriptions {
@@ -99,6 +106,7 @@ export default {
       font-size: 14px;
       color: $color;
     }
+
   }
 
 </style>
