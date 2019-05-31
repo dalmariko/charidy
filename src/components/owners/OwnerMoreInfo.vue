@@ -20,7 +20,6 @@
         <p>{{allinfo.descriptions}}</p>
       </div>
 
-
   </div>
 </template>
 
@@ -43,7 +42,6 @@ export default {
     width: 70%;
     margin-left: 44px;
   }
-
 
   img {
     display: block;
@@ -103,6 +101,5 @@ export default {
       color: #414359;
     }
   }
-
 
 </style>
