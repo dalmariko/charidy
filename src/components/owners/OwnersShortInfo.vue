@@ -1,6 +1,6 @@
 <template>
 <div class="ownershortinfo">
-    <img :src="require(`@/assets/images/${info.foto}`)" :alt='info.name'>
+    <img :src="require(`@/assets/images/${info.foto}`)" :alt='info.tittle'>
     <h3>{{info.name}}</h3>
     <h4>{{info.title}}</h4>
 </div>

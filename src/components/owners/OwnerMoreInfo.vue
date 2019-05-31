@@ -2,16 +2,14 @@
   <div class="ownermoreinfo">
 
       <div class="head ">
-        <div class="container">
           <div class="ownerdata">
             <div class="foto">
-              <img :src="require(`@/assets/images/${allinfo.foto}`)" :alt='allinfo.name'>
+              <img :src="require(`@/assets/images/${allinfo.foto}`)" :alt='allinfo.tittle'>
             </div>
-            <div class="name">
+            <div class="title">
               <h3>{{allinfo.name}}</h3>
               <h4>{{allinfo.title}}</h4>
             </div>
-          </div>
         </div>
         <div class="quotes"></div>
       </div>
@@ -42,6 +40,14 @@ export default {
     width: 70%;
     margin-left: 44px;
   }
+  %flexrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  $color:#414359;
 
   img {
     display: block;
@@ -53,32 +59,28 @@ export default {
   }
 
   .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 38px;
+    @extend %flexrow;
+    margin-bottom: 10px;
   }
-.ownerdata{
-  @extend %container;
-}
+
+  .ownerdata {
+    @extend %container;
+    @extend %flexrow;
+  }
+
   .foto {
   }
 
-  .name {
-
+  .title {
     h3 {
-      margin-bottom: 5px;
       font-family: 'VitoBold', sans-serif;
-      font-size: 18px;
-      line-height: 31px;
-      color: #414359;
+      font-size: 16px;
+      color: $color;
     }
     h4 {
       font-family: 'VitoLight', sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      color: #414359;
+      font-size: 14px;
+      color: $color;
     }
   }
 
@@ -91,14 +93,11 @@ export default {
   }
 
   .descriptions {
-@extend %container;
-
+      @extend %container;
     p {
       font-family: 'VitoLight', sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 14px;
-      color: #414359;
+      color: $color;
     }
   }
 
