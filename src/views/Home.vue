@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <div class="infoBox">
+
       <div class="mainInfo">
         <div class="owner">
-          <OwnerMoreInfo :allinfo="ovners[0]"/>
+          <OwnerMoreInfo :allinfo="owner"/>
         </div>
 
         <div class="video">
@@ -14,7 +15,6 @@
           <DonationsInfo
             v-for="(donate, name, index) in list(donations)"
             :key="index"
-            @click="showOwnerMoreinfo(donate, index)"
             :donations="donate"
           />
         </div>
@@ -27,6 +27,7 @@
           :info="ovner"
         />
       </div>
+
     </div>
   </div>
 </template>
@@ -39,7 +40,6 @@ import DonationsInfo from '@/components/donations/DonationsInfo.vue'
 
 export default {
   name: 'Home',
-  bufer: [],
   data: function () {
     return {
       donations: [
@@ -115,7 +115,7 @@ export default {
         },
         {
           name: 'Ananda',
-          foto: '',
+          foto: 'cfe7fa00eecdbb790019ef45c5c2d7bc50125ead.png',
           title:
               'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda',
           descriptions:
@@ -123,7 +123,7 @@ export default {
         },
         {
           name: 'Sandra',
-          foto: '',
+          foto: 'cfe7fa00eecdbb790019ef45c5c2d7bc50125ead.png',
           title: 'asdasdasdasdasdas',
           descriptions:
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
@@ -156,7 +156,14 @@ export default {
           descriptions:
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         }
-      ]
+      ],
+      owner: {
+        name: 'David Osborn CFRE',
+        foto: 'c320ae6bd4bbb7549f6be5803a57180aaa3aa1e6.png',
+        title: 'Trusty, Victor Smorgon Chiritable Trust asdasdasda asdasdasd',
+        descriptions:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
+      }
     }
   },
   methods: {
@@ -164,14 +171,6 @@ export default {
       return items.filter(function (item, index) {
         return item ? index < 5 : ''
       })
-    }
-  },
-  showOwnerMoreinfo: function (item, index) {
-    if (index === this.bufer[index]) {
-      return this.bufer[index]
-    } else {
-      this.bufer.push(item)
-      return this.buffer[index]
     }
   },
   components: {
@@ -183,7 +182,7 @@ export default {
   computed: {
     fiveOwners: function () {
       return this.ovners.filter(function (item, index) {
-        return item ? index < 5 : ''
+        return item ? index < 6 : ''
       })
     }
   }
@@ -196,6 +195,18 @@ export default {
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  $sm:568px;
+  $md:768px;
+  $lg:992px;
+  $hug:1200px;
+  $mamut:1360px;
+
+  @mixin mQ($arg) {
+    @media screen and (min-width: $arg) {
+      @content;
+    }
   }
 
   %flex {
@@ -213,23 +224,23 @@ export default {
   .mainInfo {
     width: 75%;
     @extend %flex;
+  }
 
-    .owner {
-      width: 70%;
-      align-self: flex-start;
-    }
+  .owner {
+    width: 70%;
+    align-self: flex-start;
+  }
 
-    .video {
-      width: 75%;
-      align-self: flex-end;
-      margin-bottom: 75px;
-      margin-right: 70px;
-    }
+  .video {
+    width: 75%;
+    align-self: flex-end;
+    margin-bottom: 75px;
+    margin-right: 70px;
+  }
 
-    .donations {
-      width: 85%;
-      align-self: flex-start;
-    }
+  .donations {
+    width: 85%;
+    align-self: flex-start;
   }
 
   .ownersInfo {
@@ -237,4 +248,5 @@ export default {
     @extend %flex;
     align-self: center;
   }
+
 </style>
