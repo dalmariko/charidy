@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <div class="infoBox">
-
       <div class="mainInfo">
-
         <div class="owner">
-          <OwnerMoreInfo/>
+          <OwnerMoreInfo :allinfo="ovners[0]"/>
         </div>
 
         <div class="video">
@@ -13,15 +11,22 @@
         </div>
 
         <div class="donations">
-          <DonationsInfo v-for="(donate,name,index) in list(donations)" :key="index" :donations="donate"/>
+          <DonationsInfo
+            v-for="(donate, name, index) in list(donations)"
+            :key="index"
+            @click="showOwnerMoreinfo(donate, index)"
+            :donations="donate"
+          />
         </div>
-
       </div>
 
       <div class="ownersInfo">
-        <OwnersShortInfo v-for="(ovner,name,index) in fiveOwners" :key="index" :info="ovner" />
+        <OwnersShortInfo
+          v-for="(ovner, name, index) in fiveOwners"
+          :key="index"
+          :info="ovner"
+        />
       </div>
-
     </div>
   </div>
 </template>
@@ -34,6 +39,7 @@ import DonationsInfo from '@/components/donations/DonationsInfo.vue'
 
 export default {
   name: 'Home',
+  bufer: [],
   data: function () {
     return {
       donations: [
@@ -80,64 +86,75 @@ export default {
       ],
       ovners: [
         {
-          name: 'Sandra',
+          name: 'David Osborn CFRE',
           foto: 'c320ae6bd4bbb7549f6be5803a57180aaa3aa1e6.png',
-          title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          title: 'Trusty, Victor Smorgon Chiritable Trust',
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Kasandra',
           foto: 'ccff91a9d9d1ae6ddf1c2041aa216e8b964ecc52.png',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Wganda',
           foto: 'cfe7fa00eecdbb790019ef45c5c2d7bc50125ead.png',
           title: 'Trusty, Victor Smorgon Chiritable Trust',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Belinda Bardas',
           foto: 'f757be725a7f67f13520660a248789ac5485b292.png',
           title: 'Trusty, Victor Smorgon Chiritable Trust',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Ananda',
           foto: '',
-          title: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          title:
+              'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda',
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Sandra',
           foto: '',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Sandra',
           foto: '',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Sandra',
           foto: '',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Sandra',
           foto: '',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },
         {
           name: 'Sandra',
           foto: '',
           title: 'asdasdasdasdasdas',
-          descriptions: 'asdfasdasdasd asdasd asdasdasdasd asdasdasd asdasd asdasdasda s asdasdasdasda'
+          descriptions:
+              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         }
       ]
     }
@@ -147,6 +164,14 @@ export default {
       return items.filter(function (item, index) {
         return item ? index < 5 : ''
       })
+    }
+  },
+  showOwnerMoreinfo: function (item, index) {
+    if (index === this.bufer[index]) {
+      return this.bufer[index]
+    } else {
+      this.bufer.push(item)
+      return this.buffer[index]
     }
   },
   components: {
@@ -161,7 +186,6 @@ export default {
         return item ? index < 5 : ''
       })
     }
-
   }
 }
 </script>
@@ -189,16 +213,19 @@ export default {
   .mainInfo {
     width: 75%;
     @extend %flex;
+
     .owner {
       width: 70%;
       align-self: flex-start;
     }
+
     .video {
       width: 75%;
       align-self: flex-end;
       margin-bottom: 75px;
       margin-right: 70px;
     }
+
     .donations {
       width: 85%;
       align-self: flex-start;
@@ -210,5 +237,4 @@ export default {
     @extend %flex;
     align-self: center;
   }
-
 </style>

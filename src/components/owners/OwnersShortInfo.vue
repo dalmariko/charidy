@@ -1,6 +1,6 @@
 <template>
 <div class="ownershortinfo">
-    <img :src="`@/assets/images${info.foto}`" :alt="info.name">
+    <img :src="require(`@/assets/images/${info.foto}`)" :alt='info.name'>
     <h3>{{info.name}}</h3>
     <h4>{{info.title}}</h4>
 </div>
@@ -32,17 +32,16 @@ export default {
     border-radius: 50%;
     cursor: pointer;
     object-fit:cover;
-    border: 1px solid #414359;
   }
 
     h3{
       width: 75%;
       text-align: center;
-      font-family: 'OpenSansExtraBold',sans-serif;
+      font-family: 'OpenSansBold', sans-serif;
       font-size: 18px;
+      color:#414359;
       margin-top: 17px;
       margin-bottom: 15px;
-      color:#414359;
       text-overflow:clip;
       &:hover {
         color: #107598;
@@ -57,7 +56,7 @@ export default {
     h4{
       width: 75%;
       text-align: center;
-      font-family: 'VitoLight',sans-serif;
+      font-family: 'OpenSansLight', sans-serif;
       font-size: 12px;
       color:#414359;
       height: 30px;

@@ -104,6 +104,6 @@
     font-family: 'OpenSansRegular';
     font-family: 'OpenSansSemiBold';
 
-    background-color: #000000;
+    background-color: #F2F2F2;
   }
 </style>
