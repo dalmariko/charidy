@@ -190,12 +190,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .container {
-    min-width: 300px;
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   $sm:568px;
   $md:768px;
@@ -203,50 +197,91 @@ export default {
   $hug:1200px;
   $mamut:1360px;
 
-  @mixin mQ($arg) {
+  @mixin media($arg) {
     @media screen and (min-width: $arg) {
       @content;
     }
   }
 
-  %flex {
-    display: flex;
-    flex-direction: column;
+  .container {
+    min-width: 300px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .infoBox {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .mainInfo {
-    width: 75%;
-    @extend %flex;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .owner {
-    width: 70%;
-    align-self: flex-start;
+    width: 75%;
   }
 
   .video {
     width: 75%;
-    align-self: flex-end;
-    margin-bottom: 75px;
-    margin-right: 70px;
   }
 
   .donations {
     width: 85%;
-    align-self: flex-start;
   }
 
   .ownersInfo {
-    width: 20%;
-    @extend %flex;
-    align-self: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media($lg){
+    .infoBox {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .mainInfo {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .owner {
+      width: 70%;
+      align-self: flex-start;
+    }
+
+    .video {
+      width: 75%;
+      align-self: flex-end;
+      margin-bottom: 75px;
+      margin-right: 70px;
+    }
+
+    .donations {
+      width: 85%;
+      align-self: flex-start;
+    }
+
+    .ownersInfo {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+
   }
 
 </style>
