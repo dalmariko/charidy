@@ -88,7 +88,7 @@ export default {
         {
           name: 'David Osborn CFRE',
           foto: 'c320ae6bd4bbb7549f6be5803a57180aaa3aa1e6.png',
-          title: 'Trusty, Victor Smorgon Chiritable Trust',
+          title: 'Trusty, Victor Smorgon Chiritable Trust asdasdasda asdasdasd',
           descriptions:
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         },

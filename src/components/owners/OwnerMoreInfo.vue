@@ -49,20 +49,22 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  %quotesANDfotoWidth{
+    width: 80px;
+    height: 80px;
+  }
 
   $color:#414359;
 
   img {
     display: block;
-    width: 100%;
-    height: 100%;
+    @extend %quotesANDfotoWidth;
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
   }
 
   .head {
-
     @extend %flexrow;
     margin-bottom: 1rem;
   }
@@ -73,11 +75,13 @@ export default {
   }
 
   .foto {
-    width: 80px;
-    height: 80px;
+    width: 30%;
   }
 
   .title {
+    width: 70%;
+    word-wrap: break-word;
+    line-height: 20px;
     h3 {
       font-family: 'VitoBold', sans-serif;
       font-size: 1.6rem;
@@ -91,16 +95,17 @@ export default {
   }
 
   .quotes {
-    width: 80px;
-    height: 80px;
-    background-image: url("~/assets/images/quotes.svg");
+    @extend %quotesANDfotoWidth;
+    /*background-image: url("~/assets/images/quotes.svg");*/
     background-position: center;
     background-size: cover;
     background-color: #ff5555;
   }
 
   .descriptions {
-      @extend %container;
+    @extend %container;
+    line-height: 20px;
+    word-wrap: break-word;
     p {
       font-family: 'VitoLight', sans-serif;
       font-size: 14px;
