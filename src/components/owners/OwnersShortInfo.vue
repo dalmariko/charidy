@@ -27,20 +27,18 @@ export default {
         slidesPerView: 5,
         spaceBetween: 10,
         breakpoints: {
-          // when window width is <= 320px
           320: {
+            direction: 'horizontal',
             slidesPerView: 1,
             spaceBetween: 10
           },
-          // when window width is <= 480px
           480: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 10
           },
-          // when window width is <= 640px
           640: {
             slidesPerView: 3,
-            spaceBetween: 30
+            spaceBetween: 10
           }
         },
         navigation: {
@@ -207,6 +205,5 @@ export default {
       }
     }
   }
-
 
 </style>
