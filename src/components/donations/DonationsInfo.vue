@@ -34,12 +34,24 @@ export default {
 
 <style scoped lang="scss">
 
+  $sm:568px;
+  $md:768px;
+  $lg:992px;
+  $hug:1200px;
+  $mamut:1360px;
+
+  @mixin media($arg) {
+    @media screen and (min-width: $arg) {
+      @content;
+    }
+  }
+
   .donationsInfo {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+justify-content: center;
     align-items: center;
     margin: 1.7rem 0;
   }

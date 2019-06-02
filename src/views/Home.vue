@@ -3,8 +3,8 @@
     <div class="infoBox">
 
       <div class="mainInfo">
-        <div class="owner">
-          <OwnerMoreInfo :allinfo="owner"/>
+        <div class="ovner">
+          <OwnerMoreInfo :allinfo="ovner"/>
         </div>
 
         <div class="video">
@@ -21,13 +21,8 @@
       </div>
 
       <div class="ownersInfo">
-        <OwnersShortInfo
-          v-for="(ovner, name, index) in fiveOwners"
-          :key="index"
-          :info="ovner"
-        />
+            <OwnersShortInfo :info="ovners"/>
       </div>
-
     </div>
   </div>
 </template>
@@ -157,12 +152,12 @@ export default {
               'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
         }
       ],
-      owner: {
+      ovner: {
         name: 'David Osborn CFRE',
         foto: 'c320ae6bd4bbb7549f6be5803a57180aaa3aa1e6.png',
         title: 'Trusty, Victor Smorgon Chiritable Trust asdasdasda asdasdasd',
         descriptions:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem delectus dicta est eveniet, excepturi explicabo fuga harum laboriosam minus mollitia non odit placeat quaerat quam quos repellendus saepe vel?'
       }
     }
   },
@@ -178,24 +173,17 @@ export default {
     OwnersShortInfo,
     VideoPreview,
     DonationsInfo
-  },
-  computed: {
-    fiveOwners: function () {
-      return this.ovners.filter(function (item, index) {
-        return item ? index < 6 : ''
-      })
-    }
   }
 }
 </script>
 
 <style scoped lang="scss">
 
-  $sm:568px;
-  $md:768px;
-  $lg:992px;
-  $hug:1200px;
-  $mamut:1360px;
+  $sm: 568px;
+  $md: 768px;
+  $lg: 992px;
+  $hug: 1200px;
+  $mamut: 1360px;
 
   @mixin media($arg) {
     @media screen and (min-width: $arg) {
@@ -225,7 +213,7 @@ export default {
     align-items: center;
   }
 
-  .owner {
+  .ovner {
     width: 75%;
   }
 
@@ -244,7 +232,7 @@ export default {
     align-items: center;
   }
 
-  @include media($lg){
+  @include media($lg) {
     .infoBox {
       width: 100%;
       display: flex;
@@ -258,7 +246,7 @@ export default {
       flex-direction: column;
     }
 
-    .owner {
+    .ovner {
       width: 70%;
       align-self: flex-start;
     }
