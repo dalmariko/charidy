@@ -1,6 +1,6 @@
 <template>
   <swiper :options="swiperOption">
-    <swiper-slide v-for="item in info" :key="item.id">
+    <swiper-slide v-for="item in ovners" :key="item.id">
       <!--        <img :src="require(`@/assets/images/${item.foto}`)" :alt='item.title'>-->
       <img>
       <h3>{{item.name}}</h3>
@@ -13,7 +13,6 @@
 
 export default {
   name: 'OwnersShortInfo',
-  props: ['info'],
   data () {
     return {
       swiperOption: {
@@ -40,6 +39,14 @@ export default {
         }
       }
     }
+  },
+  computed: {
+    ovners () {
+      return this.$store.getters.getOvners
+    }
+  },
+  created () {
+    this.$store.dispatch('loadOvners')
   }
 }
 </script>

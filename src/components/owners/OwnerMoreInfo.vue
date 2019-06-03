@@ -1,7 +1,7 @@
 <template>
   <div class="ownermoreinfo">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="item in allinfo" :key="item.id">
+      <swiper-slide v-for="item in ovners" :key="item.id">
         <div class="head ">
           <div class="ownerdata">
             <div class="foto">
@@ -27,7 +27,6 @@
 
 export default {
   name: 'OwnerMoreInfo',
-  props: ['allinfo'],
   data () {
     return {
       swiperOption: {
@@ -40,6 +39,14 @@ export default {
         }
       }
     }
+  },
+  computed: {
+    ovners () {
+      return this.$store.getters.getOvners
+    }
+  },
+  created () {
+    this.$store.dispatch('loadOvners')
   }
 }
 </script>
