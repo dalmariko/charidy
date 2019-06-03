@@ -72,7 +72,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 274px;
+    /*height: 80%;*/
     margin: 25px auto;
     word-wrap: break-word;
 

@@ -40,28 +40,30 @@
           />
         </div>
 
+        <div class="ownersInfoSliderButtons">
+          <div class="round">
+            <div class="button-prev">
+              <svg width="10.97" height="18.92" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.1992 19.0562C11.5055 18.75 11.6367 18.4 11.6367 18.0062C11.6367 17.6125 11.5055 17.2187 11.1992 16.9562L4.28672 9.99998L11.1992 3.08747C11.768 2.51872 11.768 1.55623 11.1992 0.987476C10.6305 0.418726 9.66797 0.418726 9.09922 0.987476L1.09297 8.94998C0.524219 9.51873 0.524219 10.4812 1.09297 11.05L9.09922 19.0562C9.66797 19.625 10.6305 19.625 11.1992 19.0562Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="round">
+            <div class="button-next">
+              <svg width="10.97" height="18.92"  fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.800781 19.0562C0.494531 18.75 0.363281 18.4 0.363281 18.0062C0.363281 17.6125 0.494531 17.2187 0.800781 16.9562L7.71328 9.99998L0.800781 3.08747C0.232031 2.51872 0.232031 1.55623 0.800781 0.987476C1.36953 0.418726 2.33203 0.418726 2.90078 0.987476L10.907 8.94998C11.4758 9.51873 11.4758 10.4812 10.907 11.05L2.90078 19.0562C2.33203 19.625 1.36953 19.625 0.800781 19.0562Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="ownersInfo">
         <OwnersShortInfo :info="ovners"/>
       </div>
 
-      <div class="ownersInfoSliderButtons">
-        <div class="round">
-          <div class="button-prev">
-            <svg width="10.97" height="18.92" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.1992 19.0562C11.5055 18.75 11.6367 18.4 11.6367 18.0062C11.6367 17.6125 11.5055 17.2187 11.1992 16.9562L4.28672 9.99998L11.1992 3.08747C11.768 2.51872 11.768 1.55623 11.1992 0.987476C10.6305 0.418726 9.66797 0.418726 9.09922 0.987476L1.09297 8.94998C0.524219 9.51873 0.524219 10.4812 1.09297 11.05L9.09922 19.0562C9.66797 19.625 10.6305 19.625 11.1992 19.0562Z" fill="white"/>
-            </svg>
-          </div>
-        </div>
-        <div class="round">
-          <div class="button-next">
-            <svg width="10.97" height="18.92"  fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.800781 19.0562C0.494531 18.75 0.363281 18.4 0.363281 18.0062C0.363281 17.6125 0.494531 17.2187 0.800781 16.9562L7.71328 9.99998L0.800781 3.08747C0.232031 2.51872 0.232031 1.55623 0.800781 0.987476C1.36953 0.418726 2.33203 0.418726 2.90078 0.987476L10.907 8.94998C11.4758 9.51873 11.4758 10.4812 10.907 11.05L2.90078 19.0562C2.33203 19.625 1.36953 19.625 0.800781 19.0562Z" fill="white"/>
-            </svg>
-          </div>
-        </div>
-      </div>
+
 
     </div>
   </div>
@@ -294,7 +296,7 @@ export default {
     align-items: center;
   }
 
-/*  @include media($lg) {
+  @include media($lg) {
     .infoBox {
       width: 100%;
       display: flex;
@@ -306,6 +308,15 @@ export default {
       width: 75%;
       display: flex;
       flex-direction: column;
+    }
+
+    .ownersInfoSliderButtons:first-of-type {
+      align-self: flex-start;
+    }
+
+    .ownersInfoSliderButtons:last-of-type {
+      align-self: flex-end;
+      margin-right: 280px;
     }
 
     .ovner {
@@ -332,6 +343,6 @@ export default {
       align-self: center;
     }
 
-  }*/
+  }
 
 </style>
