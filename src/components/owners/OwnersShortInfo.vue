@@ -6,8 +6,7 @@
         <h3>{{item.name}}</h3>
         <h4>{{item.title}}</h4>
     </swiper-slide>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
+
   </swiper>
 </template>
 
@@ -26,24 +25,26 @@ export default {
         direction: 'vertical',
         slidesPerView: 5,
         spaceBetween: 10,
+        navigation: {
+          nextEl: '.button-next',
+          prevEl: '.button-prev'
+        },
         breakpoints: {
           320: {
             direction: 'horizontal',
             slidesPerView: 1,
+            spaceBetween: 0
+          },
+          568: {
+            direction: 'horizontal',
+            slidesPerView: 1,
             spaceBetween: 10
           },
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 10
-          },
-          640: {
+          768: {
+            direction: 'horizontal',
             slidesPerView: 3,
             spaceBetween: 10
           }
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
         }
       }
     }
@@ -135,6 +136,18 @@ export default {
     }
   }
 
+  @include media($sm) {
+    .swiper-container {
+      width: 560px;
+      height: 1000px;
+    }
+  }
+  @include media($md) {
+    .swiper-container {
+      width: 720px;
+      height: 1000px;
+    }
+  }
   @include media($lg) {
     .swiper-container {
       width: 240px;
@@ -195,7 +208,7 @@ export default {
         height: 30px;
         overflow-y: hidden;
       }
-
+/*
       &:first-of-type {
         background: linear-gradient(210deg, #F7FAFE 0%, transparent 70%);
       }
@@ -203,6 +216,7 @@ export default {
       &:last-of-type {
         background: linear-gradient(380deg, #F7FAFE 30%, transparent 70%);
       }
+      */
     }
   }
 
