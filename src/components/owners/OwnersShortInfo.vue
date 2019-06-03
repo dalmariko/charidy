@@ -64,6 +64,7 @@ export default {
 
   .swiper-container {
     width: 100%;
+    height: 79%;
   }
 
   .swiper-slide{
@@ -72,12 +73,11 @@ export default {
     justify-content: center;
     align-items: center;
     width: 90%;
-    /*height: 80%;*/
     margin: 25px auto;
     word-wrap: break-word;
 
     background: #FFFFFF;
-    box-shadow: 0px 7px 7px rgba(27, 29, 33, 0.130774);
+    box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.130774);
     border-radius: 6px;
 
     img {
@@ -94,20 +94,18 @@ export default {
       width: 75%;
       text-align: center;
       font-family: 'OpenSansBold', sans-serif;
-      font-size: 18px;
+      font-size: 1.1rem;
       color: #414359;
-      margin-top: 17px;
-      margin-bottom: 15px;
-      text-overflow: clip;
+      margin-top: .8rem;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
 
       &:hover {
         color: #107598;
       }
-
       &:active {
         color: #107598;
       }
-
       &:link {
         color: #107598;
       }
@@ -115,21 +113,13 @@ export default {
 
     h4 {
       width: 75%;
+      height: 3rem;
       text-align: center;
       font-family: 'OpenSansLight', sans-serif;
-      font-size: 12px;
+      font-size: .9rem;
       color: #414359;
-      height: 30px;
       overflow-y: hidden;
     }
-
-/*    &:first-of-type {
-      background: linear-gradient(210deg, #F7FAFE 0%, transparent 70%);
-    }
-
-    &:last-of-type {
-      background: linear-gradient(380deg, #F7FAFE 30%, transparent 70%);
-    }*/
   }
 
   @include media($sm) {
@@ -150,69 +140,15 @@ export default {
       width: 100%;
       height: 1150px;
     }
-    .swiper-slide{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 90%;
-      margin: 20px auto;
-      word-wrap: break-word;
-      background: #FFFFFF;
-      box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.130774);
-      border-radius: 6px;
-
-      img {
-        display: block;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        cursor: pointer;
-        object-fit: cover;
-        border: 1px solid black;
-      }
-
+    .swiper-slide {
       h3 {
-        width: 75%;
-        text-align: center;
-        font-family: 'OpenSansBold', sans-serif;
-        font-size: 18px;
-        color: #414359;
-        margin-top: 17px;
-        margin-bottom: 15px;
-        text-overflow: clip;
-
-        &:hover {
-          color: #107598;
-        }
-
-        &:active {
-          color: #107598;
-        }
-
-        &:link {
-          color: #107598;
-        }
+        font-size: 1.8rem;
       }
 
       h4 {
-        width: 75%;
-        text-align: center;
-        font-family: 'OpenSansLight', sans-serif;
-        font-size: 12px;
-        color: #414359;
-        height: 30px;
-        overflow-y: hidden;
+        font-size: 1.3rem;
+        height: 4rem;
       }
-/*
-      &:first-of-type {
-        background: linear-gradient(210deg, #F7FAFE 0%, transparent 70%);
-      }
-
-      &:last-of-type {
-        background: linear-gradient(380deg, #F7FAFE 30%, transparent 70%);
-      }
-      */
     }
   }
 
