@@ -10,14 +10,10 @@
 </template>
 
 <script>
-import Slider from '@/components/Slider.vue'
 
 export default {
   name: 'OwnersShortInfo',
   props: ['info'],
-  component: {
-    Slider
-  },
   data () {
     return {
       swiperOption: {

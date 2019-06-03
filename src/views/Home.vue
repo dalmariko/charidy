@@ -1,8 +1,10 @@
 <template>
   <div class="container">
+    <HeadTitle :titles='headTitle'/>
     <div class="infoBox">
 
       <div class="mainInfo">
+
         <div class="ownersInfoSliderButtons">
           <div class="round">
             <div class="button-prev">
@@ -69,6 +71,7 @@
 </template>
 
 <script>
+import HeadTitle from '@/components/HeadTitle.vue'
 import OwnerMoreInfo from '@/components/owners/OwnerMoreInfo.vue'
 import OwnersShortInfo from '@/components/owners/OwnersShortInfo.vue'
 import VideoPreview from '@/components/video/VideoPreview.vue'
@@ -78,6 +81,7 @@ export default {
   name: 'Home',
   data: function () {
     return {
+      headTitle: 'Testimonials',
       donations: [
         {
           rased: 122.457,
@@ -203,6 +207,7 @@ export default {
     }
   },
   components: {
+    HeadTitle,
     OwnerMoreInfo,
     OwnersShortInfo,
     VideoPreview,
@@ -310,7 +315,7 @@ export default {
       &:last-of-type{
         background: linear-gradient(180deg, #F7FAFE 31.61%, rgba(249, 251, 253, 0.129289) 100%);
         transform: matrix(1, 0, 0, -1, 0, 0);
-        bottom: 200px;
+        bottom: 153px;
       }
 
     }

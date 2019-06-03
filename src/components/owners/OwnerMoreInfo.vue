@@ -24,14 +24,10 @@
 </template>
 
 <script>
-import Slider from '@/components/Slider.vue'
 
 export default {
   name: 'OwnerMoreInfo',
   props: ['allinfo'],
-  component: {
-    Slider
-  },
   data () {
     return {
       swiperOption: {
@@ -99,7 +95,7 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.06);
     border-radius: 6px;
-    padding-top: 1.5rem;
+    padding-top: 5.6rem;
     padding-bottom: 1.2rem;
   }
 
@@ -189,6 +185,10 @@ export default {
   }
 
   @include media($lg) {
+
+    .ownermoreinfo {
+      padding-top: 2rem;
+    }
 
     %container {
       width: 70%;
