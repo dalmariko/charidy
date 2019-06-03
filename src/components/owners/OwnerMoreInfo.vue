@@ -1,30 +1,50 @@
 <template>
   <div class="ownermoreinfo">
-
-      <div class="head ">
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="item in allinfo" :key="item.id">
+        <div class="head ">
           <div class="ownerdata">
             <div class="foto">
-              <img :src="require(`@/assets/images/${allinfo.foto}`)" :alt='allinfo.tittle'>
+              <!--              <img :src="require(`@/assets/images/${allinfo.foto}`)" :alt='allinfo.tittle'>-->
+              <img>
             </div>
             <div class="title">
-              <h3>{{allinfo.name}}</h3>
-              <h4>{{allinfo.title}}</h4>
+              <h3>{{item.name}}</h3>
+              <h4>{{item.title}}</h4>
             </div>
           </div>
-        <div class="quotes"></div>
-      </div>
-
-      <div class="descriptions ">
-        <p>{{allinfo.descriptions}}</p>
-      </div>
-
+          <div class="quotes"></div>
+        </div>
+        <div class="descriptions ">
+          <p>{{item.descriptions}}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
+import Slider from '@/components/Slider.vue'
+
 export default {
   name: 'OwnerMoreInfo',
-  props: ['allinfo']
+  props: ['allinfo'],
+  component: {
+    Slider
+  },
+  data () {
+    return {
+      swiperOption: {
+        direction: 'horizontal',
+        initialSlide: 0,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.button-next',
+          prevEl: '.button-prev'
+        }
+      }
+    }
+  }
 }
 </script>
 
@@ -42,6 +62,38 @@ export default {
     }
   }
 
+  .ownersInfoSliderButtons {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+    .round {
+      background-color: #107598;
+      width: 41.56px;
+      height: 41.56px;
+      border-radius: 50%;
+
+      &:first-of-type {
+        margin-right: 16px;
+      }
+
+      .button-prev,
+      .button-next {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-button-disabled {
+        background-color: #9bc5d5;
+        width: 41.56px;
+        height: 41.56px;
+        border-radius: 50%;
+      }
+    }
+  }
+
   .ownermoreinfo {
     width: 100%;
     background: #FFFFFF;
@@ -52,21 +104,23 @@ export default {
     padding-bottom: 1.2rem;
   }
 
-  %container{
+  %container {
     width: 95%;
   }
-  %flexrow{
+
+  %flexrow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  %quotesANDfotoWidth{
+
+  %quotesANDfotoWidth {
     width: 80px;
     height: 80px;
   }
 
-  $color:#414359;
+  $color: #414359;
 
   img {
     display: block;
@@ -74,6 +128,7 @@ export default {
     border-radius: 50%;
     cursor: pointer;
     object-fit: cover;
+    border: 1px solid black;
   }
 
   .head {
@@ -95,11 +150,13 @@ export default {
     width: 70%;
     word-wrap: break-word;
     line-height: 20px;
+
     h3 {
       font-family: 'VitoBold', sans-serif;
       font-size: 1.6rem;
       color: $color;
     }
+
     h4 {
       font-family: 'VitoLight', sans-serif;
       font-size: 1.4rem;
@@ -121,6 +178,7 @@ export default {
     margin: 0 auto;
     line-height: 20px;
     word-wrap: break-word;
+
     p {
       font-family: 'VitoLight', sans-serif;
       font-size: 14px;
@@ -140,22 +198,22 @@ export default {
       padding-bottom: 1.2rem;
     }
 
-    %container{
+    %container {
       width: 70%;
       margin-left: 44px;
     }
-    %flexrow{
+    %flexrow {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
-    %quotesANDfotoWidth{
+    %quotesANDfotoWidth {
       width: 80px;
       height: 80px;
     }
 
-    $color:#414359;
+    $color: #414359;
 
     img {
       display: block;
@@ -183,11 +241,13 @@ export default {
       width: 70%;
       word-wrap: break-word;
       line-height: 20px;
+
       h3 {
         font-family: 'VitoBold', sans-serif;
         font-size: 1.6rem;
         color: $color;
       }
+
       h4 {
         font-family: 'VitoLight', sans-serif;
         font-size: 1.4rem;
@@ -208,6 +268,7 @@ export default {
       @extend %container;
       line-height: 20px;
       word-wrap: break-word;
+
       p {
         font-family: 'VitoLight', sans-serif;
         font-size: 14px;

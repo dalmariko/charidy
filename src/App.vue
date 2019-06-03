@@ -1,7 +1,9 @@
 <template>
+
   <div id="app">
     <router-view/>
   </div>
+
 </template>
 
 <style lang="scss">
@@ -104,6 +106,7 @@
     font-family: 'OpenSansRegular';
     font-family: 'OpenSansSemiBold';
 
-    background-color: #F2F2F2;
+    background-color: #FFFFFF;
+
   }
 </style>

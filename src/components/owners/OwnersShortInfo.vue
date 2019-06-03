@@ -24,7 +24,6 @@ export default {
       swiperOption: {
         direction: 'vertical',
         slidesPerView: 5,
-        spaceBetween: 10,
         navigation: {
           nextEl: '.button-next',
           prevEl: '.button-prev'
@@ -32,18 +31,15 @@ export default {
         breakpoints: {
           320: {
             direction: 'horizontal',
-            slidesPerView: 1,
-            spaceBetween: 0
+            slidesPerView: 1
           },
           568: {
             direction: 'horizontal',
-            slidesPerView: 1,
-            spaceBetween: 10
+            slidesPerView: 1
           },
           768: {
             direction: 'horizontal',
-            slidesPerView: 3,
-            spaceBetween: 10
+            slidesPerView: 3
           }
         }
       }
@@ -67,8 +63,7 @@ export default {
   }
 
   .swiper-container {
-    width: 240px;
-    height: 190px;
+    width: 100%;
   }
 
   .swiper-slide{
@@ -76,12 +71,13 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 190px;
+    width: 90%;
+    height: 274px;
+    margin: 25px auto;
     word-wrap: break-word;
 
     background: #FFFFFF;
-    box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.130774);
+    box-shadow: 0px 7px 7px rgba(27, 29, 33, 0.130774);
     border-radius: 6px;
 
     img {
@@ -127,13 +123,13 @@ export default {
       overflow-y: hidden;
     }
 
-    &:first-of-type {
+/*    &:first-of-type {
       background: linear-gradient(210deg, #F7FAFE 0%, transparent 70%);
     }
 
     &:last-of-type {
       background: linear-gradient(380deg, #F7FAFE 30%, transparent 70%);
-    }
+    }*/
   }
 
   @include media($sm) {
@@ -148,20 +144,20 @@ export default {
       height: 1000px;
     }
   }
+
   @include media($lg) {
     .swiper-container {
-      width: 240px;
-      height: 1000px;
+      width: 100%;
+      height: 1150px;
     }
     .swiper-slide{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 240px;
-      height: 190px;
+      width: 90%;
+      margin: 20px auto;
       word-wrap: break-word;
-
       background: #FFFFFF;
       box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.130774);
       border-radius: 6px;

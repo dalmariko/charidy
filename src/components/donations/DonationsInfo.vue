@@ -47,11 +47,14 @@ export default {
   }
 
   .donationsInfo {
-    background-color: #ffffff;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 70px rgba(27, 29, 33, 0.06);
+    border-radius: 6px;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-justify-content: center;
+    justify-content: center;
     align-items: center;
     margin: 1.7rem 0;
   }
