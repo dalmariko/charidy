@@ -63,21 +63,27 @@ export default {
     margin: 1.1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
   }
 
   .fild {
     font-family: 'VitoLight', serif;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    line-height: 24px;
+
     text-transform: uppercase;
-    color: #acadb6;
     margin-bottom: .8rem;
+    color: #414359;
+
+    mix-blend-mode: normal;
+    opacity: 0.8;
   }
 
   %fildfooter {
     font-family: 'OpenSansSemiBold', serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 23px;
   }
 
   .rased {
@@ -87,12 +93,12 @@ export default {
 
   .donors {
     @extend %fildfooter;
-    color: #00d39a;
+    color: #00D39A;
   }
 
   .date {
     @extend %fildfooter;
-    color: #ffb968;
+    color: #FFB259;
   }
 
   .donate{
@@ -116,6 +122,38 @@ export default {
 
     &:hover {
       background-color: #f26e66;
+    }
+  }
+
+  @include media($lg){
+
+    .filds {
+      margin: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+
+    %fildfooter {
+      font-family: 'OpenSansSemiBold', serif;
+      font-size: 2.2rem;
+      line-height: 28px;
+    }
+
+    .rased {
+      @extend %fildfooter;
+      color: #107598;
+    }
+
+    .donors {
+      @extend %fildfooter;
+      color: #00D39A;
+    }
+
+    .date {
+      @extend %fildfooter;
+      color: #FFB259;
     }
   }
 

@@ -1,12 +1,11 @@
 <template>
   <swiper :options="swiperOption">
     <swiper-slide v-for="item in info" :key="item.id">
-        <!--        <img :src="require(`@/assets/images/${item.foto}`)" :alt='item.title'>-->
-        <img >
-        <h3>{{item.name}}</h3>
-        <h4>{{item.title}}</h4>
+      <!--        <img :src="require(`@/assets/images/${item.foto}`)" :alt='item.title'>-->
+      <img>
+      <h3>{{item.name}}</h3>
+      <h4>{{item.title}}</h4>
     </swiper-slide>
-
   </swiper>
 </template>
 
@@ -24,6 +23,7 @@ export default {
       swiperOption: {
         direction: 'vertical',
         slidesPerView: 5,
+        spaceBetween: 25,
         navigation: {
           nextEl: '.button-next',
           prevEl: '.button-prev'
@@ -64,16 +64,16 @@ export default {
 
   .swiper-container {
     width: 100%;
-    height: 79%;
+    height: 274px;
   }
 
-  .swiper-slide{
+  .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 25px auto;
+    margin: 0 auto;
     word-wrap: break-word;
 
     background: #FFFFFF;
@@ -94,7 +94,8 @@ export default {
       width: 75%;
       text-align: center;
       font-family: 'OpenSansBold', sans-serif;
-      font-size: 1.1rem;
+      font-size: 2.4rem;
+      line-height: 31px;
       color: #414359;
       margin-top: .8rem;
       margin-bottom: 1rem;
@@ -103,9 +104,11 @@ export default {
       &:hover {
         color: #107598;
       }
+
       &:active {
         color: #107598;
       }
+
       &:link {
         color: #107598;
       }
@@ -116,7 +119,8 @@ export default {
       height: 3rem;
       text-align: center;
       font-family: 'OpenSansLight', sans-serif;
-      font-size: .9rem;
+      font-size: 1.8rem;
+      line-height: 26px;
       color: #414359;
       overflow-y: hidden;
     }
@@ -128,6 +132,7 @@ export default {
       height: 1000px;
     }
   }
+
   @include media($md) {
     .swiper-container {
       width: 720px;
@@ -138,7 +143,7 @@ export default {
   @include media($lg) {
     .swiper-container {
       width: 100%;
-      height: 1150px;
+      height: 1275px;
     }
     .swiper-slide {
       h3 {

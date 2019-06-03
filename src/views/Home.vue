@@ -59,7 +59,9 @@
       </div>
 
       <div class="ownersInfo">
+        <div class="shadows"></div>
         <OwnersShortInfo :info="ovners"/>
+        <div class="shadows"></div>
       </div>
 
     </div>
@@ -294,6 +296,24 @@ export default {
   }
 
   @include media($lg) {
+    .shadows{
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      height: 190px;
+
+      &:first-of-type{
+        background: linear-gradient(180deg, #F7FAFE 0%, rgba(255, 255, 255, 0.270078) 100%);
+        top: 200px;
+      }
+
+      &:last-of-type{
+        background: linear-gradient(180deg, #F7FAFE 31.61%, rgba(249, 251, 253, 0.129289) 100%);
+        transform: matrix(1, 0, 0, -1, 0, 0);
+        bottom: 200px;
+      }
+
+    }
     .infoBox {
       width: 100%;
       display: flex;
