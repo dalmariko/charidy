@@ -63,8 +63,6 @@
         <OwnersShortInfo :info="ovners"/>
       </div>
 
-
-
     </div>
   </div>
 </template>
