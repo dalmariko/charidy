@@ -317,7 +317,7 @@ export default {
     }
 
     .ovner {
-      width: 70%;
+      width: 85%;
       align-self: flex-start;
     }
 
